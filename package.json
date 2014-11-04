@@ -1,0 +1,29 @@
+{
+  "name": "qthrottle",
+  "version": "0.1.0",
+  "description": "Throttle promise returning functions",
+  "main": "qthrottle.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/StefanDywersant/qthrottle.git"
+  },
+  "keywords": [
+    "promise",
+    "throttle",
+    "limit",
+    "concurrency",
+    "q"
+  ],
+  "author": "Karol Maciaszek <karol.maciaszek@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/StefanDywersant/qthrottle/issues"
+  },
+  "homepage": "https://github.com/StefanDywersant/qthrottle",
+  "dependencies": {
+    "q": "^1.0.1"
+  }
+}
