@@ -45,7 +45,7 @@ module.exports = function(limit, name) {
 
 
 		var run = function() {
-			console.log(name + ' [' + running + '/' + queue.length + ']');
+			//console.log(name + ' [' + running + '/' + queue.length + ']');
 			if (running < limit && queue.length > 0) {
 				running++;
 				var job = queue.pop();
