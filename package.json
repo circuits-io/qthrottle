@@ -1,6 +1,6 @@
 {
   "name": "qthrottle",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Throttle promise returning functions",
   "main": "qthrottle.js",
   "scripts": {
