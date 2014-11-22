@@ -1,7 +1,7 @@
 {
   "name": "qthrottle",
-  "version": "0.1.1",
-  "description": "Throttle promise returning functions",
+  "version": "0.2.0",
+  "description": "Limits concurrency of promise returning functions",
   "main": "qthrottle.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
