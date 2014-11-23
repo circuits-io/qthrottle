@@ -45,7 +45,9 @@ The new downloader function will start as most 10 download sessions at once.
 * limit - concurrency limit
 
 
-	throttle.fcall(func, thisArg, arg1, arg2, ...)
+	var promise = throttle.fcall(func, thisArg, arg1, arg2, ...)
+
+* promise - an [Q](https://github.com/kriskowal/q) promise which is going to be resolved once promise returned by func resolves
 
 * func - function which is going to be limited
 
@@ -54,7 +56,9 @@ The new downloader function will start as most 10 download sessions at once.
 * arg1, arg2, ... - variable arguments list for func
 
 
-	throttle.fapply(func, thisArg, args)
+	var promise = throttle.fapply(func, thisArg, args)
+
+* promise - an [Q](https://github.com/kriskowal/q) promise which is going to be resolved once promise returned by func resolves
 
 * func - function which is going to be limited
 
