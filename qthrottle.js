@@ -2,7 +2,7 @@ var q = require('q');
 
 module.exports = function(limit) {
 
-	
+
 	function QThrottle(limit) {
 
 
@@ -41,6 +41,23 @@ module.exports = function(limit) {
 			run();
 
 			return deferred.promise;
+		};
+
+
+		/**
+		 * Soft rescale.
+		 * Will add jobs when limit increases.
+		 * Will not kill jobs when limit decreases, but will not allow new jobs to be created until limit is sattisfied again.
+		 * @param  {int} new_limit New maximum number of parallel jobs
+		 */
+		this.rescale = function(new_limit) {
+			limit = new_limit;
+			run();
+		};
+
+
+		this.getLimit = function() {
+			return limit;
 		};
 
 
