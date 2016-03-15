@@ -4,7 +4,7 @@ Limits concurrency of promise returning functions.
 
 ## Installation
 
-	$ npm install qthrottle
+    $ npm install qthrottle
 
 ## Example
 
@@ -12,40 +12,47 @@ Limits concurrency of promise returning functions.
 
 The downloader function will start as many download sessions as it is called.
 
-	var downloader = (function() {
+```
+    var downloader = (function() {
 
-		return function(url) {
-			// return an promise
-		};
+        return function(url) {
+            // return an promise
+        };
 
-	})();
+    })();
+```
 
 ### After
 
-The new downloader function will start as most 10 download sessions at once.
+The new downloader function will start at most 10 download sessions at once.
 
-	var downloader = (function() {
+```
+    var downloader = (function() {
 
-		var throttle = require('qthrottle')(10);
+        var throttle = require('qthrottle')(10);
 
-		var download = function(url) {
-			// return an promise
-		};
+        var download = function(url) {
+            // return an promise
+        };
 
-		return function(url) {
-			return throttle.fcall(download, null, url);
-		};
+        return function(url) {
+            return throttle.fcall(download, null, url);
+        };
 
-	})();
+    })();
+```
 
 ## API
 
-	var throttle = require('qthrottle')(limit)
+```
+    var throttle = require('qthrottle')(limit)
+```
 
 * limit - concurrency limit
 
-
-	var promise = throttle.fcall(func, thisArg, arg1, arg2, ...)
+```
+    var promise = throttle.fcall(func, thisArg, arg1, arg2, ...)
+```
 
 * promise - an [Q](https://github.com/kriskowal/q) promise which is going to be resolved once promise returned by func resolves
 
@@ -55,8 +62,9 @@ The new downloader function will start as most 10 download sessions at once.
 
 * arg1, arg2, ... - variable arguments list for func
 
-
-	var promise = throttle.fapply(func, thisArg, args)
+```
+    var promise = throttle.fapply(func, thisArg, args)
+```
 
 * promise - an [Q](https://github.com/kriskowal/q) promise which is going to be resolved once promise returned by func resolves
 
