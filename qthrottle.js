@@ -69,7 +69,7 @@ module.exports = function(limit) {
 					running--;
 					job.deferred.resolve(value);
 					run();
-				}).fail(function(error) {
+				}).catch(function(error) {
 					running--;
 					job.deferred.reject(error);
 					run();
